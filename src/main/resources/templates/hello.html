@@ -5,10 +5,11 @@
     <title>hello.html</title>
   </head>
   <body>
-    <form th:action="@{/helloprint}" th:object="${helloPrintForm}" method="post">
-        名前を入力してください：
-        <input type="text" th:field="*{name}" /><br>
-        <input type="submit" value="送信する" />
+    <form th:action="@{/hello-conf}" th:object="${helloPrintForm}" method="post">
+	  <p th:errors="*{all}" class="error-message">error!</p>
+      名前を入力してください：
+      <input type="text" th:field="*{name}" th:errorclass="error-input" /><br>
+      <input type="submit" value="送信する" />
     </form>
   </body>
 </html>
