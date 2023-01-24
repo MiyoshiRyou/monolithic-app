@@ -2,9 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
-    <title>helloprint.html</title>
+    <title>helloEnd.html</title>
   </head>
   <body>
     ようこそ<span th:text="${helloPrintForm.name}">デフォルト</span>さん
+    <form th:action="@{/hello-input}" method="post">
+		<input type="submit" value="register" />
+	</form>
   </body>
 </html>
